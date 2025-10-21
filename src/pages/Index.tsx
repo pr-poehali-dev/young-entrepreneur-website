@@ -166,7 +166,7 @@ const Index = () => {
 
       <section id="nominations" className="bg-white">
         <img 
-          src="https://cdn.poehali.dev/files/61ad1d16-0eff-48ab-bf60-7df37e6e4f58.png"
+          src="https://cdn.poehali.dev/projects/208adb51-1b01-42d5-b2bf-88a64ef17409/files/bd64fe7d-3284-43b4-b177-3ba6f8c6e3fe.jpg"
           alt="Номинации"
           className="w-full h-auto"
         />
