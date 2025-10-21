@@ -230,16 +230,16 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-lg font-bold mb-3">Контакты</h3>
-              <div className="space-y-2 text-sm text-white/90">
+              <h3 className="text-base font-bold mb-2">Контакты</h3>
+              <div className="space-y-1 text-xs text-white/90">
                 <p className="flex items-center gap-2">
-                  <Icon name="Globe" size={16} />
+                  <Icon name="Globe" size={14} />
                   <a href="https://lcvr.net/YzPR" target="_blank" rel="noopener noreferrer" className="hover:underline">
                     lcvr.net/YzPR
                   </a>
                 </p>
                 <p className="flex items-center gap-2">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.863-.523-2.049-1.723-1.033-1.01-1.49-1.146-1.745-1.146-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.335-3.202-2.17-3.092-2.763-5.424-2.763-5.932 0-.254.102-.491.593-.491h1.744c.441 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.491-.085.744-.576.744z"/>
                   </svg>
                   <a href="https://vk.com/balanceschool_nov" target="_blank" rel="noopener noreferrer" className="hover:underline">
@@ -250,15 +250,15 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-bold mb-3">Организатор</h3>
-              <p className="text-sm text-white/90">
+              <h3 className="text-base font-bold mb-2">Организатор</h3>
+              <p className="text-xs text-white/90">
                 Детская бизнес-школа "Планета BALANCE"
               </p>
             </div>
             
             <div>
-              <h3 className="text-lg font-bold mb-3">География</h3>
-              <p className="text-sm text-white/90">
+              <h3 className="text-base font-bold mb-2">География</h3>
+              <p className="text-xs text-white/90">
                 Первая сеть детских бизнес-школ в Южном Федеральном округе
               </p>
             </div>
