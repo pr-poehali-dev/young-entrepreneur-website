@@ -187,18 +187,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="md:col-span-2 flex justify-center">
-              <img 
-                src="https://cdn.poehali.dev/files/61ad1d16-0eff-48ab-bf60-7df37e6e4f58.png"
-                alt="Номинации"
-                className="rounded-2xl shadow-xl w-full max-w-3xl"
-              />
-            </div>
-          </div>
-        </div>
+      <section className="bg-white">
+        <img 
+          src="https://cdn.poehali.dev/files/61ad1d16-0eff-48ab-bf60-7df37e6e4f58.png"
+          alt="Номинации"
+          className="w-full h-auto"
+        />
       </section>
 
       <section id="registration" className="py-20 px-4 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
