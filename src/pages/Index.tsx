@@ -184,7 +184,7 @@ const Index = () => {
             
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
               <a 
-                href="https://lcvr.net/YzPR" 
+                href="https://forms.yandex.ru/cloud/68da5026493639a5275c2eb3" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block w-full"
