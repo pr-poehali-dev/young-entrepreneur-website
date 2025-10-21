@@ -83,80 +83,20 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-br from-muted via-white to-muted">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://cdn.poehali.dev/files/ef65bbe5-bad8-4b25-8508-e23bd82bb3af.png"
-                alt="Юный предприниматель"
-                className="rounded-2xl shadow-xl w-full"
-              />
-            </div>
-            
-            <div>
-              <h2 className="text-4xl font-bold mb-6 text-primary">Добрый день!</h2>
-              <div className="space-y-4 text-lg">
-                <p>
-                  В рамках образовательной программы бизнес-школы Планета «BALANCE», 
-                  приглашаем Вас и Вашего ребенка <strong className="text-accent">принять участие в масштабном 
-                  и перспективном конкурсе «Юный предпринимательЪ»</strong>, первой в Краснодарском крае 
-                  премии для школьников по предпринимательству.
-                </p>
-                <p className="text-foreground">
-                  Мероприятие ориентировано на детей <strong>от 7 до 17 лет (включительно)</strong>. 
-                  Участвовать может каждый у кого есть бизнес-идея, в том числе и родители 
-                  (в номинации «Семейный бизнес»)
-                </p>
-                <div className="bg-primary/10 rounded-xl p-6 border-l-4 border-primary">
-                  <p className="text-primary font-bold text-xl mb-2">
-                    Для участия в конкурсе требуется только проект подготовленный ребенком 
-                    и НИКАКОЙ ОПЛАТЫ
-                  </p>
-                </div>
-                <div className="bg-accent/10 rounded-xl p-4">
-                  <p className="font-semibold">
-                    <span className="text-accent">Немного цифр:</span> В Новороссийске конкурс проводится уже в <strong>5-й</strong> раз!
-                  </p>
-                  <p className="mt-2">За предыдущие годы <strong>91</strong> школьник в возрасте от <strong>7 до 17</strong> лет стали 
-                  <strong className="text-accent"> лауреатами</strong> конкурса. <strong>209 проектов</strong> было представлено в очной защите, 
-                  а количество поданных заявок превысило <strong>600</strong>. Объём инвестиций направленных в детские проекты составил</p>
-                  <p className="text-3xl font-bold text-accent mt-2">более 1 млн 140 тыс.руб.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="bg-white">
+        <img 
+          src="https://cdn.poehali.dev/files/ef65bbe5-bad8-4b25-8508-e23bd82bb3af.png"
+          alt="Юный предприниматель"
+          className="w-full h-auto"
+        />
       </section>
 
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6 text-primary">
-                В рамках премии дети смогут получить такие навыки:
-              </h2>
-              <div className="space-y-4">
-                {skills.map((skill, index) => (
-                  <div key={index} className="flex items-center gap-4 bg-muted rounded-lg p-4 hover:shadow-md transition-shadow">
-                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <p className="text-lg font-medium">{skill}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <img 
-                src="https://cdn.poehali.dev/files/4898d2fd-49ed-481c-86ff-17f485db4582.png"
-                alt="Навыки участников"
-                className="rounded-2xl shadow-xl w-full"
-              />
-            </div>
-          </div>
-        </div>
+      <section className="bg-white">
+        <img 
+          src="https://cdn.poehali.dev/files/4898d2fd-49ed-481c-86ff-17f485db4582.png"
+          alt="Навыки участников"
+          className="w-full h-auto"
+        />
       </section>
 
       <section className="bg-white">
