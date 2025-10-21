@@ -227,8 +227,8 @@ const Index = () => {
       </section>
 
       <footer className="bg-primary text-white py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-col gap-6 mb-8">
             <div>
               <h3 className="text-lg font-bold mb-3">Контакты</h3>
               <div className="space-y-2 text-sm text-white/90">
