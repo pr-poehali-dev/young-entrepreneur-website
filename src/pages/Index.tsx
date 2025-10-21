@@ -1,151 +1,181 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import Icon from '@/components/ui/icon';
-import { Badge } from '@/components/ui/badge';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
-  const stages = [
-    {
-      number: 1,
-      title: 'Подача заявок',
-      date: '1-15 ноября 2025',
-      description: 'Регистрация участников через Яндекс.Формы',
-      icon: 'FileText'
-    },
-    {
-      number: 2,
-      title: 'Отборочный этап',
-      date: '16-25 ноября 2025',
-      description: 'Проверка заявок и отбор финалистов',
-      icon: 'Users'
-    },
-    {
-      number: 3,
-      title: 'Финал',
-      date: '1 декабря 2025',
-      description: 'Защита проектов перед жюри',
-      icon: 'Trophy'
-    }
-  ];
-
   const nominations = [
     {
-      title: 'Лучшая бизнес-идея',
-      description: 'Оригинальность и реалистичность проекта',
-      icon: 'Lightbulb',
-      color: 'bg-primary/10 text-primary'
+      title: "Лучшая бизнес-идея",
+      description: "Самый креативный и реализуемый проект",
+      icon: "Lightbulb"
     },
     {
-      title: 'Инновации',
-      description: 'Применение новых технологий и подходов',
-      icon: 'Rocket',
-      color: 'bg-secondary/10 text-secondary'
+      title: "Социальный предприниматель",
+      description: "Проект, помогающий обществу",
+      icon: "Heart"
     },
     {
-      title: 'Social',
-      description: 'Польза проекта для общества',
-      icon: 'Heart',
-      color: 'bg-accent/20 text-accent-foreground'
+      title: "Эко-инициатива",
+      description: "Забота об экологии и природе",
+      icon: "Leaf"
     },
     {
-      title: 'Командная работа',
-      description: 'Слаженность и эффективность команды',
-      icon: 'Handshake',
-      color: 'bg-muted text-muted-foreground'
+      title: "Цифровые технологии",
+      description: "Инновации и IT-решения",
+      icon: "Rocket"
     }
   ];
 
+  const stages = [
+    {
+      date: "15 ноября - 30 ноября",
+      title: "Приём заявок",
+      description: "Регистрация участников и подача проектов"
+    },
+    {
+      date: "1 декабря - 10 декабря",
+      title: "Отборочный этап",
+      description: "Экспертная оценка поданных проектов"
+    },
+    {
+      date: "15 декабря",
+      title: "Финал и награждение",
+      description: "Презентация лучших проектов и вручение призов"
+    }
+  ];
+
+  const scrollToRegistration = () => {
+    document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center animate-fade-in">
-            <Badge className="mb-6 text-base px-6 py-2 bg-accent/80 hover:bg-accent text-accent-foreground font-semibold">
-              Бесплатный городской конкурс
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
-              ЮНЫЙ ПРЕДПРИНИМАТЕЛЬ
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Покажи свою бизнес-идею и стань лидером будущего! Участвуй в конкурсе для детей 10-17 лет
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-                onClick={() => window.open('https://forms.yandex.ru/cloud/65f8a1a2d0468847a1234567/', '_blank')}
-              >
-                <Icon name="Rocket" className="mr-2" size={24} />
-                Зарегистрироваться
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-6 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold transition-all"
-                onClick={() => document.getElementById('stages')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Узнать подробнее
-              </Button>
+    <div className="min-h-screen">
+      <section className="relative bg-gradient-to-br from-primary via-accent to-secondary py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-white animate-fade-in">
+              <Badge className="mb-4 bg-white text-primary hover:bg-white/90">
+                Бесплатный городской конкурс
+              </Badge>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Юный предприниматель
+              </h1>
+              <p className="text-xl mb-8 text-white/90">
+                Покажи свою бизнес-идею, получи ценный опыт и выиграй призы! 
+                Конкурс для детей, которые хотят изменить мир.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button 
+                  size="lg" 
+                  onClick={scrollToRegistration}
+                  className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 shadow-lg"
+                >
+                  Подать заявку
+                  <Icon name="ArrowRight" className="ml-2" size={20} />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold"
+                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Узнать больше
+                </Button>
+              </div>
+            </div>
+            
+            <div className="relative animate-scale-in">
+              <img 
+                src="https://cdn.poehali.dev/projects/208adb51-1b01-42d5-b2bf-88a64ef17409/files/590df5a6-4023-41ff-a643-6c75ce034d05.jpg"
+                alt="Дети-предприниматели"
+                className="rounded-2xl shadow-2xl w-full"
+              />
             </div>
           </div>
         </div>
-        <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute -top-20 -left-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
       </section>
 
-      <section id="stages" className="py-20 px-4">
+      <section id="about" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Этапы конкурса</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">Три простых шага к победе</p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {stages.map((stage, index) => (
-              <Card 
-                key={index} 
-                className="relative overflow-hidden border-2 hover:border-primary transition-all hover:shadow-xl animate-scale-in group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary to-secondary" />
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                      <Icon name={stage.icon as any} size={32} />
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-sm font-bold text-primary mb-1">ЭТАП {stage.number}</div>
-                      <h3 className="text-xl font-bold mb-2">{stage.title}</h3>
-                    </div>
-                  </div>
-                  <div className="bg-accent/20 rounded-lg px-4 py-2 mb-3 inline-block">
-                    <p className="text-sm font-semibold text-accent-foreground">{stage.date}</p>
-                  </div>
-                  <p className="text-muted-foreground">{stage.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              О конкурсе
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              "Юный предприниматель" — это уникальная возможность для детей попробовать себя в роли настоящих бизнесменов
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Card className="border-2 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-8 text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Trophy" size={32} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Ценные призы</h3>
+                <p className="text-muted-foreground">
+                  Победители получат дипломы, призы и сертификаты на обучение
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-8 text-center">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Users" size={32} className="text-secondary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Менторство</h3>
+                <p className="text-muted-foreground">
+                  Участники получат консультации от опытных предпринимателей
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-8 text-center">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Star" size={32} className="text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Опыт и навыки</h3>
+                <p className="text-muted-foreground">
+                  Развитие предпринимательского мышления и лидерских качеств
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-secondary/5 to-primary/5">
+      <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Номинации</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">Выбери направление для своего проекта</p>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Номинации конкурса
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Выбери направление, которое тебе ближе всего
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
             {nominations.map((nomination, index) => (
-              <Card 
-                key={index} 
-                className="border-2 hover:border-secondary transition-all hover:shadow-xl hover:-translate-y-2 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-6 text-center">
-                  <div className={`inline-flex p-4 rounded-2xl mb-4 ${nomination.color}`}>
-                    <Icon name={nomination.icon as any} size={40} />
+              <Card key={index} className="border-2 hover:border-primary transition-all hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name={nomination.icon} size={24} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">{nomination.title}</h3>
+                      <p className="text-muted-foreground">{nomination.description}</p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{nomination.title}</h3>
-                  <p className="text-sm text-muted-foreground">{nomination.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -153,128 +183,140 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <Card className="border-2 border-primary shadow-2xl">
-            <CardContent className="p-8 md:p-12 text-center">
-              <div className="inline-flex p-4 rounded-full bg-primary/10 mb-6">
-                <Icon name="Star" size={48} className="text-primary" />
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Этапы конкурса
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Простой путь от идеи до победы
+            </p>
+          </div>
+
+          <div className="relative">
+            {stages.map((stage, index) => (
+              <div key={index} className="mb-12 last:mb-0">
+                <div className="flex gap-8 items-start">
+                  <div className="flex-shrink-0 relative">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                      {index + 1}
+                    </div>
+                    {index < stages.length - 1 && (
+                      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-1 h-12 bg-primary/30"></div>
+                    )}
+                  </div>
+                  
+                  <Card className="flex-1 border-2 hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <Badge className="mb-2 bg-secondary">{stage.date}</Badge>
+                      <h3 className="text-2xl font-bold mb-2">{stage.title}</h3>
+                      <p className="text-muted-foreground text-lg">{stage.description}</p>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Готов стать предпринимателем?</h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Заполни форму регистрации и присоединяйся к сообществу молодых лидеров! Участие бесплатное, призы гарантированы.
-              </p>
-              <Button 
-                size="lg" 
-                className="text-lg px-10 py-6 bg-primary hover:bg-primary/90 text-primary-foreground font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-                onClick={() => window.open('https://forms.yandex.ru/cloud/65f8a1a2d0468847a1234567/', '_blank')}
-              >
-                <Icon name="Send" className="mr-2" size={24} />
-                Подать заявку
-              </Button>
-            </CardContent>
-          </Card>
+            ))}
+          </div>
         </div>
       </section>
 
-      <footer className="bg-foreground/5 py-12 px-4 mt-20">
+      <section id="registration" className="py-20 px-4 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Участвуй в конкурсе!
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Заполни форму регистрации и начни свой путь к успеху
+            </p>
+            
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+              <img 
+                src="https://cdn.poehali.dev/projects/208adb51-1b01-42d5-b2bf-88a64ef17409/files/a292f2d2-185b-4d7a-b436-62994bcdf237.jpg"
+                alt="Юный предприниматель"
+                className="rounded-xl mb-6 w-full max-w-md mx-auto"
+              />
+              
+              <a 
+                href="https://forms.yandex.ru/cloud/YOUR_FORM_ID/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block w-full"
+              >
+                <Button 
+                  size="lg" 
+                  className="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-semibold text-xl py-8 shadow-lg"
+                >
+                  <Icon name="FileText" className="mr-2" size={24} />
+                  Заполнить форму регистрации
+                </Button>
+              </a>
+              
+              <p className="text-sm text-muted-foreground mt-6 max-w-2xl mx-auto">
+                Участвуя в конкурсе, вы даёте согласие на обработку персональных данных в соответствии 
+                с Федеральным законом от 27.07.2006 № 152-ФЗ "О персональных данных". 
+                Данные используются исключительно для организации конкурса и не передаются третьим лицам.
+              </p>
+            </div>
+
+            <Card className="border-2 border-primary/20 bg-white">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="Info" className="text-primary flex-shrink-0" size={24} />
+                  <div className="text-left">
+                    <h4 className="font-bold mb-2">Требования к участникам</h4>
+                    <ul className="text-muted-foreground space-y-1 text-sm">
+                      <li>• Возраст: 8-17 лет</li>
+                      <li>• Наличие оригинальной бизнес-идеи</li>
+                      <li>• Готовность презентовать проект</li>
+                      <li>• Согласие родителей на участие (для несовершеннолетних)</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-foreground text-white py-12 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Контакты</h3>
-              <div className="space-y-2 text-muted-foreground">
+              <h3 className="text-xl font-bold mb-4">Контакты</h3>
+              <div className="space-y-2 text-white/80">
                 <p className="flex items-center gap-2">
                   <Icon name="Mail" size={18} />
-                  info@youngentrepreneur.ru
+                  contest@example.com
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="Phone" size={18} />
-                  +7 (800) 123-45-67
+                  +7 (XXX) XXX-XX-XX
                 </p>
               </div>
             </div>
+            
             <div>
-              <h3 className="text-2xl font-bold mb-4">Организаторы</h3>
-              <p className="text-muted-foreground">Городской центр развития предпринимательства</p>
+              <h3 className="text-xl font-bold mb-4">Организаторы</h3>
+              <p className="text-white/80">
+                Городской центр поддержки молодёжного предпринимательства
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold mb-4">Поддержка</h3>
+              <p className="text-white/80">
+                При поддержке Министерства образования и Торгово-промышленной палаты
+              </p>
             </div>
           </div>
           
-          <div className="border-t border-border pt-8">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="link" className="text-muted-foreground hover:text-foreground p-0">
-                  Политика конфиденциальности и обработки персональных данных
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl">Политика конфиденциальности</DialogTitle>
-                  <DialogDescription className="text-base">
-                    Обработка персональных данных участников конкурса
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="space-y-4 text-sm">
-                  <div>
-                    <h4 className="font-bold mb-2">1. Общие положения</h4>
-                    <p className="text-muted-foreground">
-                      Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных участников конкурса "Юный предприниматель" (далее - Конкурс).
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold mb-2">2. Собираемые данные</h4>
-                    <p className="text-muted-foreground">
-                      При регистрации мы собираем: ФИО участника, дату рождения, контактные данные (email, телефон), образовательное учреждение, описание проекта.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold mb-2">3. Цели обработки данных</h4>
-                    <p className="text-muted-foreground">
-                      Персональные данные используются для: организации и проведения Конкурса, связи с участниками, объявления результатов, вручения призов.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold mb-2">4. Согласие на обработку</h4>
-                    <p className="text-muted-foreground">
-                      Для участников младше 14 лет требуется согласие родителей/законных представителей. Участники 14-18 лет предоставляют согласие самостоятельно с уведомлением родителей.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold mb-2">5. Защита данных</h4>
-                    <p className="text-muted-foreground">
-                      Мы применяем технические и организационные меры для защиты персональных данных от несанкционированного доступа, изменения или уничтожения.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold mb-2">6. Права субъектов данных</h4>
-                    <p className="text-muted-foreground">
-                      Участники имеют право на доступ к своим данным, их исправление, удаление или ограничение обработки. Для реализации прав обращайтесь по email: privacy@youngentrepreneur.ru
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold mb-2">7. Срок хранения данных</h4>
-                    <p className="text-muted-foreground">
-                      Данные хранятся в течение проведения Конкурса и 1 года после его завершения, после чего подлежат удалению.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-bold mb-2">8. Контакты</h4>
-                    <p className="text-muted-foreground">
-                      По вопросам обработки персональных данных: privacy@youngentrepreneur.ru, +7 (800) 123-45-67
-                    </p>
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
-            
-            <p className="text-center text-muted-foreground mt-4">
-              © 2025 Конкурс "Юный предприниматель". Все права защищены.
+          <div className="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+            <p>© 2024 Юный предприниматель. Все права защищены.</p>
+            <p className="mt-2">
+              Персональные данные участников обрабатываются в соответствии с ФЗ-152 
+              и используются исключительно для целей проведения конкурса.
             </p>
           </div>
         </div>
