@@ -190,29 +190,11 @@ const Index = () => {
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6 text-primary">Номинации конкурса:</h2>
-              <div className="space-y-4">
-                {nominations.map((nomination, index) => (
-                  <Card key={index} className="border-2 border-primary/20 hover:border-primary transition-all hover:shadow-lg">
-                    <CardContent className="p-4">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Icon name={nomination.icon} size={24} className="text-white" />
-                        </div>
-                        <h3 className="text-xl font-bold">{nomination.title}</h3>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-            
-            <div>
+            <div className="md:col-span-2 flex justify-center">
               <img 
                 src="https://cdn.poehali.dev/files/61ad1d16-0eff-48ab-bf60-7df37e6e4f58.png"
                 alt="Номинации"
-                className="rounded-2xl shadow-xl w-full"
+                className="rounded-2xl shadow-xl w-full max-w-3xl"
               />
             </div>
           </div>
