@@ -49,47 +49,64 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <nav className="fixed top-0 right-0 z-50 p-4">
-        <div className="flex flex-col gap-2">
-          <Button 
-            size="sm" 
-            onClick={() => scrollToSection('about')}
-            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
-          >
-            О конкурсе
-          </Button>
-          <Button 
-            size="sm" 
-            onClick={() => scrollToSection('skills')}
-            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
-          >
-            Навыки
-          </Button>
-          <Button 
-            size="sm" 
-            onClick={() => scrollToSection('goals')}
-            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
-          >
-            Цели
-          </Button>
-          <Button 
-            size="sm" 
-            onClick={() => scrollToSection('nominations')}
-            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
-          >
-            Номинации
-          </Button>
-          <Button 
-            size="sm" 
-            onClick={() => scrollToSection('registration')}
-            className="bg-accent hover:bg-accent/90 text-white shadow-lg"
-          >
-            Регистрация
-          </Button>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div className="container mx-auto px-4 py-3">
+          <div className="hidden md:flex items-center justify-center gap-2">
+            <Button 
+              size="sm" 
+              onClick={() => scrollToSection('about')}
+              variant="ghost"
+              className="text-primary hover:bg-primary/10 text-xs"
+            >
+              О конкурсе
+            </Button>
+            <Button 
+              size="sm" 
+              onClick={() => scrollToSection('skills')}
+              variant="ghost"
+              className="text-primary hover:bg-primary/10 text-xs"
+            >
+              Навыки
+            </Button>
+            <Button 
+              size="sm" 
+              onClick={() => scrollToSection('goals')}
+              variant="ghost"
+              className="text-primary hover:bg-primary/10 text-xs"
+            >
+              Цели
+            </Button>
+            <Button 
+              size="sm" 
+              onClick={() => scrollToSection('nominations')}
+              variant="ghost"
+              className="text-primary hover:bg-primary/10 text-xs"
+            >
+              Номинации
+            </Button>
+            <Button 
+              size="sm" 
+              onClick={() => scrollToSection('registration')}
+              className="bg-accent hover:bg-accent/90 text-white text-xs ml-2"
+            >
+              Регистрация
+            </Button>
+          </div>
+          
+          <div className="md:hidden flex items-center justify-between">
+            <span className="text-sm font-bold text-primary">Планета BALANCE</span>
+            <Button 
+              size="sm" 
+              onClick={() => scrollToSection('registration')}
+              className="bg-accent hover:bg-accent/90 text-white text-xs"
+            >
+              Участвовать
+            </Button>
+          </div>
         </div>
       </nav>
 
-      <section id="hero" className="relative bg-white py-12 px-4 overflow-hidden">
+      <section id="hero" className="relative bg-white py-12 px-4 overflow-hidden mt-16">
         <div className="absolute top-0 left-0 w-32 h-32 bg-primary rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-40 h-40 bg-secondary rounded-full opacity-15 translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-20 left-10 w-20 h-20 bg-accent rounded-full opacity-20"></div>
