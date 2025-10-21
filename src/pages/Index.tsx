@@ -240,9 +240,7 @@ const Index = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="MessageCircle" size={18} />
-                  <a href="https://vk.com/balanceschool_nov" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    balanceschool_nov
-                  </a>
+                  balanceschool_nov
                 </p>
               </div>
             </div>
