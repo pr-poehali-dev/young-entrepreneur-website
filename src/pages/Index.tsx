@@ -159,32 +159,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://cdn.poehali.dev/files/92fad429-0e8b-43b9-8d22-a8251c46978f.png"
-                alt="Цель конкурса"
-                className="rounded-2xl shadow-xl w-full"
-              />
-            </div>
-            
-            <div>
-              <h2 className="text-4xl font-bold mb-6 text-primary">Цель конкурса:</h2>
-              <div className="space-y-3">
-                {goals.map((goal, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold flex-shrink-0 mt-1">
-                      {index + 1}
-                    </div>
-                    <p className="text-lg">{goal}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="bg-white">
+        <img 
+          src="https://cdn.poehali.dev/files/92fad429-0e8b-43b9-8d22-a8251c46978f.png"
+          alt="Цель конкурса"
+          className="w-full h-auto"
+        />
       </section>
 
       <section className="bg-white">
