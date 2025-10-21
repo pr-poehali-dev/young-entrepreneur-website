@@ -43,13 +43,53 @@ const Index = () => {
     }
   ];
 
-  const scrollToRegistration = () => {
-    document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div className="min-h-screen">
-      <section className="relative bg-white py-12 px-4 overflow-hidden">
+      <nav className="fixed top-0 right-0 z-50 p-4">
+        <div className="flex flex-col gap-2">
+          <Button 
+            size="sm" 
+            onClick={() => scrollToSection('about')}
+            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
+          >
+            О конкурсе
+          </Button>
+          <Button 
+            size="sm" 
+            onClick={() => scrollToSection('skills')}
+            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
+          >
+            Навыки
+          </Button>
+          <Button 
+            size="sm" 
+            onClick={() => scrollToSection('goals')}
+            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
+          >
+            Цели
+          </Button>
+          <Button 
+            size="sm" 
+            onClick={() => scrollToSection('nominations')}
+            className="bg-primary/90 hover:bg-primary text-white shadow-lg"
+          >
+            Номинации
+          </Button>
+          <Button 
+            size="sm" 
+            onClick={() => scrollToSection('registration')}
+            className="bg-accent hover:bg-accent/90 text-white shadow-lg"
+          >
+            Регистрация
+          </Button>
+        </div>
+      </nav>
+
+      <section id="hero" className="relative bg-white py-12 px-4 overflow-hidden">
         <div className="absolute top-0 left-0 w-32 h-32 bg-primary rounded-full opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-40 h-40 bg-secondary rounded-full opacity-15 translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-20 left-10 w-20 h-20 bg-accent rounded-full opacity-20"></div>
@@ -71,7 +111,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <Button 
                   size="lg" 
-                  onClick={scrollToRegistration}
+                  onClick={() => scrollToSection('registration')}
                   className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 shadow-lg"
                 >
                   Участвовать в конкурсе
@@ -83,7 +123,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section id="about" className="bg-white">
         <img 
           src="https://cdn.poehali.dev/files/ef65bbe5-bad8-4b25-8508-e23bd82bb3af.png"
           alt="Юный предприниматель"
@@ -91,7 +131,7 @@ const Index = () => {
         />
       </section>
 
-      <section className="bg-white">
+      <section id="skills" className="bg-white">
         <img 
           src="https://cdn.poehali.dev/files/4898d2fd-49ed-481c-86ff-17f485db4582.png"
           alt="Навыки участников"
@@ -99,7 +139,7 @@ const Index = () => {
         />
       </section>
 
-      <section className="bg-white">
+      <section id="goals" className="bg-white">
         <img 
           src="https://cdn.poehali.dev/files/92fad429-0e8b-43b9-8d22-a8251c46978f.png"
           alt="Цель конкурса"
@@ -107,7 +147,7 @@ const Index = () => {
         />
       </section>
 
-      <section className="bg-white">
+      <section id="nominations" className="bg-white">
         <img 
           src="https://cdn.poehali.dev/files/61ad1d16-0eff-48ab-bf60-7df37e6e4f58.png"
           alt="Номинации"
