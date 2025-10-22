@@ -123,7 +123,7 @@ const Index = () => {
             
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
-                Первая сеть детских бизнес-школ в Южном Федеральном округе
+                V конкурс премия ЮНЫЙ ПРЕДПРИНИМАТЕЛЬ 2025
               </h2>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <Button 
