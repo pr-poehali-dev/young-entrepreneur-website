@@ -191,10 +191,10 @@ const Index = () => {
               >
                 <Button 
                   size="lg" 
-                  className="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-semibold text-xl py-8 shadow-lg"
+                  className="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-semibold text-base sm:text-xl py-6 sm:py-8 shadow-lg px-4"
                 >
-                  <Icon name="FileText" className="mr-2" size={24} />
-                  Заполнить форму регистрации
+                  <Icon name="FileText" className="mr-2 flex-shrink-0" size={20} />
+                  <span className="break-words">Заполнить форму регистрации</span>
                 </Button>
               </a>
               
