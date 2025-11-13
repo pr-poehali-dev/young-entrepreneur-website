@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const skills = [
@@ -84,6 +85,15 @@ const Index = () => {
             >
               Номинации
             </Button>
+            <Link to="/partners">
+              <Button 
+                size="sm" 
+                variant="ghost"
+                className="text-primary hover:bg-primary/10 text-xs"
+              >
+                Партнёры
+              </Button>
+            </Link>
             <Button 
               size="sm" 
               onClick={() => scrollToSection('registration')}
