@@ -7,7 +7,7 @@ const Partners = () => {
   const organizers = [
     {
       name: "Детская бизнес-школа «Планета BALANCE»",
-      logo: "https://cdn.poehali.dev/projects/208adb51-1b01-42d5-b2bf-88a64ef17409/files/e12a5ce4-3501-4bfc-a4b7-5796d2a76336.jpg"
+      logo: "https://cdn.poehali.dev/projects/208adb51-1b01-42d5-b2bf-88a64ef17409/files/1bf60551-a3f0-4881-8d35-f9c4ed55ec32.jpg"
     },
     {
       name: "Центр поддержки предпринимательства города Новороссийска",
